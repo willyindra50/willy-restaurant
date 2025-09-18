@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+🍽️ Willy Restaurant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Willy Restaurant, a modern restaurant web application built with Vite, React, and TypeScript. This project aims to provide a smooth and interactive experience for customers and restaurant staff alike.
 
-Currently, two official plugins are available:
+🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live application here:
+👉 https://willy-restaurant.vercel.app/
 
-## Expanding the ESLint configuration
+🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Frontend: React, Vite, TypeScript
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+State Management: React Context API
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Styling: Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Routing: React Router
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+API: RESTful API (Foody API
+)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+⚙️ Key Features
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📋 Interactive Menu: Browse menu items by category, see prices and descriptions.
+
+🛒 Shopping Cart: Add items to cart and calculate the total order amount.
+
+✅ Checkout Process: Fill in order details and confirm purchases.
+
+🗂️ Staff Management: Login feature for restaurant staff with restricted access.
+
+🔍 Search & Filter: Quickly find restaurants or menu items by keywords.
+
+🌐 Responsive Design: Fully mobile-friendly with clean, modern UI.
+
+🚀 Getting Started (Local Development)
+
+Follow these steps to run the project locally:
+
+Clone the repository:
+
+git clone https://github.com/willyindra50/willy-restaurant.git
+cd willy-restaurant
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
+npm run dev
+
+Open http://localhost:5173
+in your browser to see the app.
+
+📦 Build for Production
+
+To create a production-ready build:
+
+npm run build
+
+The output will be generated in the dist/ folder.
+
+🔧 Environment Configuration
+
+This project uses environment variables to configure the API endpoint. Create a .env file in the project root:
+
+VITE_API_BASE_URL=https://foody-api-xi.vercel.app/api
+
+Note: For Vercel deployment, set this variable in the Vercel dashboard instead of committing .env.
+
+💡 Future Improvements
+
+Add user authentication and profile management
+
+Implement order history tracking
+
+Add reviews and rating system for restaurants
+
+Optimize performance and loading speed
