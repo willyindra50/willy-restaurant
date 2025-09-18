@@ -3,18 +3,22 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
     "lib": ["ES2022"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
+    "module": "Node16",
 
-    /* Pakai node-style resolution, bukan bundler */
-    "moduleResolution": "node",
+    /* Pakai node16 resolution untuk Vite/ESM */
+    "moduleResolution": "Node16",
 
     /* Jangan auto-include type defs dari dep */
     "types": ["node"],
 
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "noEmit": true,
-    "strict": true
+    "strict": true,
+
+    /* Tambahan supaya default imports bisa jalan */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": ["vite.config.ts"],
   "exclude": ["node_modules", "**/node_modules/*"]
